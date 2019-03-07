@@ -11801,11 +11801,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SZ\\source\\repos\\Online-Book\\Empty_Project\\Empty_Project\\Empty_Project.csproj",
+      "projectUniqueName": "C:\\Users\\SZ\\Source\\Repos\\Online-Book\\Online-Book\\Empty_Project\\Empty_Project.csproj",
       "projectName": "Empty_Project",
-      "projectPath": "C:\\Users\\SZ\\source\\repos\\Online-Book\\Empty_Project\\Empty_Project\\Empty_Project.csproj",
+      "projectPath": "C:\\Users\\SZ\\Source\\Repos\\Online-Book\\Online-Book\\Empty_Project\\Empty_Project.csproj",
       "packagesPath": "C:\\Users\\SZ\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SZ\\source\\repos\\Online-Book\\Empty_Project\\Empty_Project\\obj\\",
+      "outputPath": "C:\\Users\\SZ\\Source\\Repos\\Online-Book\\Online-Book\\Empty_Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
