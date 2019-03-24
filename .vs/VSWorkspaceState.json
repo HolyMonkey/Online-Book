@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ASPNetCore"
+    "\\ASPNetCore",
+    "\\ASPNetCore\\Controllers",
+    "\\ASPNetCore\\Views",
+    "\\ASPNetCore\\Views\\Page",
+    "\\ASPNetCore\\Views\\Shared"
   ],
-  "SelectedNode": "\\ASPNetCore",
+  "SelectedNode": "\\ASPNetCore.sln",
   "PreviewInSolutionExplorer": false
 }
