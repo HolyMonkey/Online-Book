@@ -14,7 +14,8 @@ namespace ASPNetCore.Controllers
             return View();
         }
 
-        [Route("{action = Page}/{page:int}")]
+        [Route("[action]")]
+        [Route("[action]/{page:int}")]
         public IActionResult Page(int page)
         {
             List<Page> pages = new List<Page>();
@@ -25,6 +26,10 @@ namespace ASPNetCore.Controllers
             {
                 ViewData["Page"] = _page.Number;
                 ViewData["Message"] = _page.Content;
+            }
+            else
+            {
+                return Redirect("/Home/Index");
             }
             return View();
         }
