@@ -94,6 +94,14 @@
                     In nomine Patris et Filii et Spiritus Sancti.
                 </p>
             </div>
+            <div>
+                <nav aria-label="...">
+                    <ul class="pager">
+                        <li class="previous @ViewData["VisiblePreviousPage"]"><a href="@ViewData["PreviousPage"]"><span aria-hidden="true">&larr;</span> Предыдущая</a></li>
+                        <li class="next @ViewData["VisibleNextPage"]"><a href="@ViewData["NextPage"]">Следующая <span aria-hidden="true">&rarr;</span></a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
     <div class="col-sm-4 table-bordered">
