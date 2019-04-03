@@ -1,0 +1,147 @@
+﻿@using ASPNetCore.Views.Page;
+@{
+    ViewData["Title"] = "PageTest";
+    if (ViewData["PreviousPage"] != null)
+    {
+        ViewData["VisiblePreviousPage"] = "show";
+        ViewData["LinkPreviousPage"] = ((Page)ViewData["PreviousPage"]).Number;
+    }
+    else
+    {
+        ViewData["VisiblePreviousPage"] = "hidden";
+    }
+    if (ViewData["NextPage"] != null)
+    {
+        ViewData["VisibleNextPage"] = "show";
+        ViewData["LinkNextPage"] = ((Page)ViewData["NextPage"]).Number;
+    }
+    else
+    {
+        ViewData["VisibleNextPage"] = "hidden";
+    }
+}
+
+<div class="container-fluid">
+    <div class="col-md-8">
+        <div class="body-content table-bordered">
+            <div>
+                <h1>
+                    @ViewData["Title"]
+                </h1>
+                <p>@ViewData["Page"] @ViewData["Message"]</p>
+                <p>
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                </p>
+                <p>
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                </p>
+                <p>
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                </p>
+                <div class="row table-bordered ">
+                    <div class=" col-lg-1">
+                    </div>
+                    <div class="col-lg-10 table-bordered">
+                        <p class="text-center">
+                            PROMO BLOK
+                        </p>
+                    </div>
+                    <div class="col-lg-1">
+                    </div>
+                </div>
+                <p>
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                </p>
+                <p>
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                </p>
+                <p>
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                    In nomine Patris et Filii et Spiritus Sancti.
+                </p>
+            </div>
+            <div>
+                <nav aria-label="...">
+                    <ul class="pager">
+                        <li class="previous @ViewData["VisiblePreviousPage"]"><a href="@ViewData["LinkPreviousPage"]"><span aria-hidden="true">&larr;</span> Предыдущая</a></li>
+                        <li class="next @ViewData["VisibleNextPage"]"><a href="@ViewData["LinkNextPage"]">Следующая <span aria-hidden="true">&rarr;</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4 table-bordered">
+        <h4 class="text-center">Оглавление</h4>
+        <ul class="list-unstyled">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+            <li>Integer molestie lorem at massa</li>
+            <li>Facilisis in pretium nisl aliquet</li>
+            <li>
+                Nulla volutpat aliquam velit
+                <ul>
+                    <li>Phasellus iaculis neque</li>
+                    <li>Purus sodales ultricies</li>
+                    <li>Vestibulum laoreet porttitor sem</li>
+                    <li>Ac tristique libero volutpat at</li>
+                </ul>
+            </li>
+            <li>Faucibus porta lacus fringilla vel</li>
+            <li>Aenean sit amet erat nunc</li>
+            <li>Eget porttitor lorem</li>
+        </ul>
+    </div>
+</div>

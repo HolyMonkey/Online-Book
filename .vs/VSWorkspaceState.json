@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ASPNetCore",
+    "\\ASPNetCore\\Controllers",
+    "\\ASPNetCore\\Views",
+    "\\ASPNetCore\\Views\\Home",
+    "\\ASPNetCore\\Views\\Page",
+    "\\ASPNetCore\\Views\\Shared"
   ],
+  "SelectedNode": "\\ASPNetCore\\Views\\Page\\Page.cshtml",
   "PreviewInSolutionExplorer": false
 }
