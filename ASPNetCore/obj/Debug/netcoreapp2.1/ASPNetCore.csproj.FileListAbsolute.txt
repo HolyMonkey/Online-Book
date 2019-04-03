@@ -31,3 +31,4 @@ C:\Users\SZ\Source\Repos\VqqSanZayp\Online-Book\ASPNetCore\obj\Debug\netcoreapp2
 C:\Users\SZ\Source\Repos\VqqSanZayp\Online-Book\ASPNetCore\obj\Debug\netcoreapp2.1\ASPNetCore.pdb
 C:\Users\SZ\Source\Repos\VqqSanZayp\Online-Book\ASPNetCore\obj\Debug\netcoreapp2.1\ASPNetCore.csproj.CopyComplete
 C:\Users\SZ\Source\Repos\VqqSanZayp\Online-Book\ASPNetCore\obj\Debug\netcoreapp2.1\Razor\Views\Page\Page.g.cshtml.cs
+C:\Users\SZ\Source\Repos\VqqSanZayp\Online-Book\ASPNetCore\obj\Debug\netcoreapp2.1\Razor\Views\Page\Page1.g.cshtml.cs

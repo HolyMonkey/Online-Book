@@ -1,5 +1,24 @@
-﻿@{
+﻿@using ASPNetCore.Views.Page;
+@{
     ViewData["Title"] = "PageTest";
+    if (ViewData["PreviousPage"] != null)
+    {
+        ViewData["VisiblePreviousPage"] = "show";
+        ViewData["LinkPreviousPage"] = ((Page)ViewData["PreviousPage"]).Number;
+    }
+    else
+    {
+        ViewData["VisiblePreviousPage"] = "hidden";
+    }
+    if (ViewData["NextPage"] != null)
+    {
+        ViewData["VisibleNextPage"] = "show";
+        ViewData["LinkNextPage"] = ((Page)ViewData["NextPage"]).Number;
+    }
+    else
+    {
+        ViewData["VisibleNextPage"] = "hidden";
+    }
 }
 
 <div class="container-fluid">
@@ -50,15 +69,15 @@
                     In nomine Patris et Filii et Spiritus Sancti.
                 </p>
                 <div class="row table-bordered ">
-                        <div class=" col-lg-1">
-                        </div>
-                        <div class="col-lg-10 table-bordered">
-                            <p class="text-center">
-                                PROMO BLOK
-                            </p>
-                        </div>
-                        <div class="col-lg-1">
-                        </div>
+                    <div class=" col-lg-1">
+                    </div>
+                    <div class="col-lg-10 table-bordered">
+                        <p class="text-center">
+                            PROMO BLOK
+                        </p>
+                    </div>
+                    <div class="col-lg-1">
+                    </div>
                 </div>
                 <p>
                     In nomine Patris et Filii et Spiritus Sancti.
@@ -97,8 +116,8 @@
             <div>
                 <nav aria-label="...">
                     <ul class="pager">
-                        <li class="previous @ViewData["VisiblePreviousPage"]"><a href="@ViewData["PreviousPage"]"><span aria-hidden="true">&larr;</span> Предыдущая</a></li>
-                        <li class="next @ViewData["VisibleNextPage"]"><a href="@ViewData["NextPage"]">Следующая <span aria-hidden="true">&rarr;</span></a></li>
+                        <li class="previous @ViewData["VisiblePreviousPage"]"><a href="@ViewData["LinkPreviousPage"]"><span aria-hidden="true">&larr;</span> Предыдущая</a></li>
+                        <li class="next @ViewData["VisibleNextPage"]"><a href="@ViewData["LinkNextPage"]">Следующая <span aria-hidden="true">&rarr;</span></a></li>
                     </ul>
                 </nav>
             </div>
