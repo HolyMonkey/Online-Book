@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ASPNetCore.Views.Page;
+using ASPNetCore.Models;
 
 namespace ASPNetCore.Controllers
 {
@@ -39,6 +40,17 @@ namespace ASPNetCore.Controllers
                 return Redirect("/Home/Index");
             }
             return View();
+        }
+
+        public IActionResult Contents()
+        {
+            Chapter FirstChapter = new Chapter("First chapter", new List<Page> { new Page(1, "First page") });
+            Chapter SecondChapter = new Chapter("Second chapter", new List<Page> { new Page(2, "Second  page"), new Page(3, "Third page") });
+            List<Chapter> contents = new List<Chapter>();
+            contents.Add(FirstChapter);
+            contents.Add(SecondChapter);
+
+            return View(contents);
         }
     }
 }
