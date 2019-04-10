@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using ASPNetCore.Views.Page;
 using ASPNetCore.Models;
 
 namespace ASPNetCore.Controllers
 {
     public class PageController : Controller
     {
+        private readonly PagesContext _context;
+
+        public PageController(PagesContext context)
+        {
+            _context = context;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -19,14 +25,14 @@ namespace ASPNetCore.Controllers
         [Route("[action]/{page:int}")]
         public IActionResult Page(int page)
         {
-            List<Page> pages = new List<Page>();
-            pages.Add(new Page(1, "First page"));
-            pages.Add(new Page(2, "Second page"));
-            pages.Add(new Page(3, "Three page"));
-            Page _page = pages.Find((p) => p.Number == page);
-            Page _previouspage = pages.Find((p) => p.Number == page-1);
-            Page _nextpage = pages.Find((p) => p.Number == page + 1);
-
+            _context.Add(new Page(1, "First page"));
+            _context.Add(new Page(2, "Second page"));
+            _context.Add(new Page(3, "Third page"));
+            _context.SaveChanges();
+            Page _page = _context.Pages.FirstOrDefault(p => p.Number == page);
+            Page _previouspage = _context.Pages.FirstOrDefault(p => p.Number == page -1);
+            Page _nextpage = _context.Pages.FirstOrDefault(p => p.Number == page + 1);
+            
             ViewData["PreviousPage"] = _previouspage;
             ViewData["NextPage"] = _nextpage;
 
