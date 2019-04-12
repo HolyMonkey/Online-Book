@@ -10,7 +10,9 @@ namespace ASPNetCore.Models
     {
         public PagesContext(DbContextOptions<PagesContext> options)
             : base(options)
-        { }
+        {
+            Database.EnsureCreated();
+        }
 
         public DbSet<Page> Pages { get; set; }
     }
