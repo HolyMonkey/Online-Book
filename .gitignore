@@ -74,3 +74,6 @@ _[Ss]cripts
 *.ncrunchsolution
 *.dot[Cc]over
 /.vs/ASPNetCore/v15/Server/sqlite3/db.lock
+/.vs/ASPNetCore/v16/Server/sqlite3
+/.vs/ASPNetCore/DesignTimeBuild
+/.vs/ASPNetCore/config

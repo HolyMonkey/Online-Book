@@ -40,13 +40,18 @@
 
     <partial name="_CookieConsentPartial" />
 
+    
+
+   
+    {
     <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2019 - ASPNetCore</p>
-        </footer>
-    </div>
+            @RenderBody()
+            <hr />
+            <footer>
+                @Html.Partial(PromoBlocks())
+            </footer>
+        </div>
+    }
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
@@ -72,3 +77,32 @@
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+
+@{ 
+    string PromoBlocks()
+    {
+        string promo = "PromoBlock";
+        Random rand = new Random();
+        switch(rand.Next(0, 10))
+        {
+            case 0:
+            case 1:
+                promo += "01";
+                break;
+            case 2:
+            case 3:
+                promo += "02";
+                break;
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+                promo += "03";
+                break;
+        }
+
+        return promo;
+    }
+}
