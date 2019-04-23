@@ -3,11 +3,13 @@
     "",
     "\\ASPNetCore",
     "\\ASPNetCore\\Controllers",
+    "\\ASPNetCore\\Models",
+    "\\ASPNetCore\\obj",
     "\\ASPNetCore\\Views",
     "\\ASPNetCore\\Views\\Home",
     "\\ASPNetCore\\Views\\Page",
     "\\ASPNetCore\\Views\\Shared"
   ],
-  "SelectedNode": "\\ASPNetCore\\Views\\Page\\Page.cshtml",
+  "SelectedNode": "\\ASPNetCore.sln",
   "PreviewInSolutionExplorer": false
 }
