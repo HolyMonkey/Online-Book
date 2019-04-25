@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ASPNetCore.Views.Page
+namespace ASPNetCore.Models
 {
     public class Page
     {
+        public int PageID { get; set; }
         public int Number { get; private set; }
         public string Content { get; private set; }
 
