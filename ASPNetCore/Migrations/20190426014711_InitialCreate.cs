@@ -10,14 +10,15 @@ namespace ASPNetCore.Migrations
                 name: "Pages",
                 columns: table => new
                 {
-                    PageID = table.Column<int>(nullable: false)
+                    ID = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Number = table.Column<int>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
                     Content = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Pages", x => x.PageID);
+                    table.PrimaryKey("PK_Pages", x => x.ID);
                 });
         }
 

@@ -10,6 +10,6 @@
     "\\ASPNetCore\\Views\\Page",
     "\\ASPNetCore\\Views\\Shared"
   ],
-  "SelectedNode": "\\ASPNetCore.sln",
+  "SelectedNode": "\\ASPNetCore\\Controllers\\PageController.cs",
   "PreviewInSolutionExplorer": false
 }

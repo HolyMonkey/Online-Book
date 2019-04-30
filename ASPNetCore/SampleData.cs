@@ -13,9 +13,9 @@ namespace ASPNetCore
             if (!context.Pages.Any())
             {
                 context.Pages.AddRange(
-                    new Page(1, "First page"),
-                    new Page(2, "Second page"),
-                    new Page(3, "Thred page")
+                    new Page(1, "First page", "First page content"),
+                    new Page(2, "Second page", "Second page content"),
+                    new Page(3, "Thred page", "Thred page content")
                 );
                 context.SaveChanges();
             }
