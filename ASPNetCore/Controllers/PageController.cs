@@ -52,21 +52,21 @@ namespace ASPNetCore.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(string pagename, string pagecontent)
+        public IActionResult Create(string pageName, string pageContent)
         {
-            int pagenumber = (_context.Pages.Count())+1;
-            _context.Pages.Add(new Page(pagenumber, pagename, pagecontent));
+            int pageNumber = (_context.Pages.Count())+1;
+            _context.Pages.Add(new Page(pageNumber, pageName, pageContent));
             _context.SaveChanges();
             return Redirect("/Home/Index");
         }
 
         public IActionResult Contents()
         {
-            Chapter FirstChapter = new Chapter("First chapter", new List<Page> { new Page(1, "First page", "First page content") });
-            Chapter SecondChapter = new Chapter("Second chapter", new List<Page> { new Page(2, "Second page", "Second page content"), new Page(3, "Thred page", "Thred page content") });
+            Chapter firstChapter = new Chapter("First chapter", new List<Page> { new Page(1, "First page", "First page content") });
+            Chapter secondChapter = new Chapter("Second chapter", new List<Page> { new Page(2, "Second page", "Second page content"), new Page(3, "Thred page", "Thred page content") });
             List<Chapter> contents = new List<Chapter>();
-            contents.Add(FirstChapter);
-            contents.Add(SecondChapter);
+            contents.Add(firstChapter);
+            contents.Add(secondChapter);
 
             return View(contents);
         }
