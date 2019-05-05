@@ -7,8 +7,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ASPNetCore.Migrations
 {
-    [DbContext(typeof(Page))]
-    [Migration("20190410133504_InitialCreate")]
+    [DbContext(typeof(PagesContext))]
+    [Migration("20190426014711_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,14 +19,16 @@ namespace ASPNetCore.Migrations
 
             modelBuilder.Entity("ASPNetCore.Models.Page", b =>
                 {
-                    b.Property<int>("PageID")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Content");
 
+                    b.Property<string>("Name");
+
                     b.Property<int>("Number");
 
-                    b.HasKey("PageID");
+                    b.HasKey("ID");
 
                     b.ToTable("Pages");
                 });

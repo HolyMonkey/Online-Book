@@ -35,7 +35,8 @@ namespace ASPNetCore.Controllers
             if (_page != null)
             {
                 ViewData["Page"] = _page.Number;
-                ViewData["Message"] = _page.Content;
+                ViewData["PageName"] = _page.Name;
+                ViewData["PageContent"] = _page.Content;
             }
             else
             {
@@ -44,13 +45,28 @@ namespace ASPNetCore.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(string pageName, string pageContent)
+        {
+            int pageNumber = (_context.Pages.Count())+1;
+            _context.Pages.Add(new Page(pageNumber, pageName, pageContent));
+            _context.SaveChanges();
+            return Redirect("/Home/Index");
+        }
+
         public IActionResult Contents()
         {
-            Chapter FirstChapter = new Chapter("First chapter", new List<Page> { new Page(1, "First page") });
-            Chapter SecondChapter = new Chapter("Second chapter", new List<Page> { new Page(2, "Second  page"), new Page(3, "Third page") });
+            Chapter firstChapter = new Chapter("First chapter", new List<Page> { new Page(1, "First page", "First page content") });
+            Chapter secondChapter = new Chapter("Second chapter", new List<Page> { new Page(2, "Second page", "Second page content"), new Page(3, "Thred page", "Thred page content") });
             List<Chapter> contents = new List<Chapter>();
-            contents.Add(FirstChapter);
-            contents.Add(SecondChapter);
+            contents.Add(firstChapter);
+            contents.Add(secondChapter);
 
             return View(contents);
         }

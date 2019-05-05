@@ -1,0 +1,32 @@
+﻿@using ASPNetCore.Models;
+@{
+    ViewData["Title"] = "Creating a page";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://cloud.tinymce.com/5/tinymce.min.js?apiKey=your_API_key'></script>
+    <script>
+  tinymce.init({
+    selector: '#content'
+  });
+    </script>
+</head>
+
+<body>
+    <h1>Creating a page</h1>
+    <form method="post">
+        <p>
+            <label>Page name:</label><br />
+            <input type="text" name="pagename" />
+        </p>
+        <p>
+            <label>Page content:</label><br />
+            <textarea name="pagecontent" id="content"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Addpage" />
+        </p>
+    </form>
+</body>
+</html>
